@@ -16,9 +16,9 @@
 				for($i=0; $i<5; $i++) {
 					mysqli_data_seek($result,rand($min,$max)-1);
 					$row = $result->fetch_object();
-                	$digits = rand(01,$row->count);
+                			$digits = rand(01,$row->count);
 
-                	if (strstr($rewards, $row->filename)){
+                			if (strstr($rewards, $row->filename)){
 						while (strstr($rewards, $row->filename)) {
 							mysqli_data_seek($result,rand($min,$max)-1);
 							$row = $result->fetch_object();
